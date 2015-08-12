@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Service Type Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service types</th>
+      <th>Services</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @service_type_services.each do |service_type_service| %>
+      <tr>
+        <td><%= service_type_service.service_types %></td>
+        <td><%= service_type_service.services %></td>
+        <td><%= link_to 'Show', service_type_service %></td>
+        <td><%= link_to 'Edit', edit_service_type_service_path(service_type_service) %></td>
+        <td><%= link_to 'Destroy', service_type_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Service type service', new_service_type_service_path %>

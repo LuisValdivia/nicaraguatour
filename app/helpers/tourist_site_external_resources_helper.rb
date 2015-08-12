@@ -1,0 +1,2 @@
+module TouristSiteExternalResourcesHelper
+end

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tourist_site.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tourist_site.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @tourist_site.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @tourist_site.contact %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @tourist_site.owner %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @tourist_site.photo %>
+</p>
+
+<p>
+  <strong>Specific location:</strong>
+  <%= @tourist_site.specific_location %>
+</p>
+
+<%= link_to 'Edit', edit_tourist_site_path(@tourist_site) %> |
+<%= link_to 'Back', tourist_sites_path %>

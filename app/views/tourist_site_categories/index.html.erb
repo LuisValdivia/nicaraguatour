@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tourist Site Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tourist site</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourist_site_categories.each do |tourist_site_category| %>
+      <tr>
+        <td><%= tourist_site_category.tourist_site %></td>
+        <td><%= tourist_site_category.category %></td>
+        <td><%= link_to 'Show', tourist_site_category %></td>
+        <td><%= link_to 'Edit', edit_tourist_site_category_path(tourist_site_category) %></td>
+        <td><%= link_to 'Destroy', tourist_site_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourist site category', new_tourist_site_category_path %>

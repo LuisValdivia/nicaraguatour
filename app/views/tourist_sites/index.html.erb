@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tourist Sites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Concat</th>
+      <th>Owner</th>
+      <th>Photo</th>
+      <th>Specific location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourist_sites.each do |tourist_site| %>
+      <tr>
+        <td><%= tourist_site.name %></td>
+        <td><%= tourist_site.description %></td>
+        <td><%= tourist_site.address %></td>
+        <td><%= tourist_site.contact %></td>
+        <td><%= tourist_site.owner %></td>
+        <td><%= tourist_site.photo %></td>
+        <td><%= tourist_site.specific_location %></td>
+        <td><%= link_to 'Show', tourist_site %></td>
+        <td><%= link_to 'Edit', edit_tourist_site_path(tourist_site) %></td>
+        <td><%= link_to 'Destroy', tourist_site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourist site', new_tourist_site_path %>

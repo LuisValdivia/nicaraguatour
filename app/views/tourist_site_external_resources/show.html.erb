@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tourist site:</strong>
+  <%= @tourist_site_external_resource.tourist_site %>
+</p>
+
+<p>
+  <strong>External resource:</strong>
+  <%= @tourist_site_external_resource.external_resource %>
+</p>
+
+<%= link_to 'Edit', edit_tourist_site_external_resource_path(@tourist_site_external_resource) %> |
+<%= link_to 'Back', tourist_site_external_resources_path %>

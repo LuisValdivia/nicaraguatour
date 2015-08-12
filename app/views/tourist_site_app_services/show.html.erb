@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tourist site:</strong>
+  <%= @tourist_site_app_service.tourist_site %>
+</p>
+
+<p>
+  <strong>App service:</strong>
+  <%= @tourist_site_app_service.app_service %>
+</p>
+
+<%= link_to 'Edit', edit_tourist_site_app_service_path(@tourist_site_app_service) %> |
+<%= link_to 'Back', tourist_site_app_services_path %>

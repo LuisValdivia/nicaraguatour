@@ -1,0 +1,25 @@
+<%= form_for(@tourist_site_app_service) do |f| %>
+  <% if @tourist_site_app_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tourist_site_app_service.errors.count, "error") %> prohibited this tourist_site_app_service from being saved:</h2>
+
+      <ul>
+      <% @tourist_site_app_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tourist_site_id %><br>
+    <%= f.text_field :tourist_site_id %>
+  </div>
+  <div class="field">
+    <%= f.label :app_service_id %><br>
+    <%= f.text_field :app_service_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
