@@ -61,6 +61,15 @@ class DepartmentsController < ApplicationController
     end
   end
 
+
+  #GET /departments/get_department_by_id/1
+  def get_department_by_id
+    @department_id = params[:id]
+    @department = Department.find(@department_id)
+
+    render json: @department
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_department

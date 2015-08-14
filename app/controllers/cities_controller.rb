@@ -61,6 +61,14 @@ class CitiesController < ApplicationController
     end
   end
 
+  #GET /cities/get_cities_by_department_id/1
+  def get_cities_by_department_id
+    @department_id = params[:id]
+    @cities = City.where(department_id: @department_id)
+
+    render json: @cities
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_city
